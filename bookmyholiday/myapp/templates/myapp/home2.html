@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #afcc7a !important;
+        }
+    </style>
+
+    <div align="center">
+        <h1>Home Page</h1>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Welcome!</h4>
+        <p>You are an authenticated admin. You can proceed to view or schedule load.</p>
+        <hr>
+        <p class="mb-0">This helps you to schedule the employees to machine based on workload and skill level.</p>
+    </div>
+
+
+
+
+</head>
+
+<body>
+
+    <form class="" action="logout/" method="post" align="center">
+        {% csrf_token %}
+        <br><br>
+        <input type="submit" name="" value="LOGOUT">
+        <br><br>
+    </form>
+
+    <form class="" action="login/" method="post" align="center">
+        {% csrf_token %}
+        <br><br>
+        <input type="submit" name="" value="LOGIN">
+        <br><br>
+    </form>
+
+    <div class="card-group">
+        <div class="card " style="width: 18rem;  ">
+            <img src="https://www.prolim.com/wp-content/uploads/2019/02/CAM.jpg " class="card-img-top " alt="Employee ">
+            <div class="card-body ">
+                <h5 class="card-title ">Machine Master</h5>
+                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="# " class="btn btn-primary ">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card " style="width: 18rem; ">
+            <img src="https://i.pinimg.com/736x/a1/f2/b5/a1f2b55363ce84a09a3aab448194a9e9.jpg " class="card-img-top " alt="Employee ">
+            <div class="card-body ">
+                <h5 class="card-title ">Machine Master</h5>
+                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="# " class="btn btn-primary ">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card " style="width: 18rem; ">
+            <img src="https://image.shutterstock.com/image-photo/industry-40-business-concept-businessman-260nw-530091988.jpg " class="card-img-top " alt="Employee ">
+            <div class="card-body ">
+                <h5 class="card-title ">Machine Master</h5>
+                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="# " class="btn btn-primary ">Go somewhere</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

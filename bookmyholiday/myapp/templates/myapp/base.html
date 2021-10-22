@@ -1,0 +1,205 @@
+{% extends 'myapp/nav.html' %} {% load static %} {% block content %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WTproj</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.css"></link>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/footer.css'}">
+    <link>
+</head>
+<style>
+    .carousel-item {
+        height: 65vh;
+        min-height: 350px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    body {
+        overflow-x: hidden;
+        color: #fff
+    }
+    
+    p {
+        font-size: 14px
+    }
+    
+    .container-fluid {
+        background-color: #252324
+    }
+    
+    .top-part {
+        background-color: #252324
+    }
+    
+    .center-content {
+        margin-top: 120px;
+        margin-bottom: 120px
+    }
+    
+    .btn-pink {
+        border-radius: 0;
+        background-color: #7B1FA2;
+        color: #fff !important;
+        letter-spacing: 2px;
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px
+    }
+    
+    .btn-pink:hover {
+        background-color: #512DA8
+    }
+    
+    .line {
+        border-top: 1px solid #7B1FA2;
+        width: 90% !important
+    }
+    
+    .fa-mobile {
+        font-size: 20px
+    }
+    
+    #contact {
+        font-size: 15px
+    }
+    
+    .grey-text {
+        color: lightgrey
+    }
+</style>
+
+<body>
+
+
+
+    <!-- *********************************************CAROUSEL**************************************************************************************-->
+
+    <header>
+        <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('https://wallpapercave.com/wp/wp3218378.jpg')">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="dark">Beaches</h3>
+                        <p text-dark>... sandy shores and sea breeze what else can you ask for!!!</p>
+                        <button type="button" class=" text-white btn btn-dark" onclick="location.href='{% url 'catalog-beaches' %}'" ;>search beaches</button>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://wallpapercave.com/wp/wp2337158.jpg')">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Hill Stations</h3>
+                        <p>for those who love misty mornings and the smell of coffee!!!</p>
+                        <button type="button" class=" text-white btn btn-dark" onclick="location.href='{% url 'catalog-hillstations' %}'" ;>search Hill stations</button>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Heritage sites</h5>
+                        <p>History and heritage is what India is full of!!!</p>
+                        <button type="button" class=" text-white btn btn-dark" onclick="location.href='{% url 'catalog-heritagesites' %}'" ;>search Heritage sites</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+        </div>
+    </header>
+
+    <!-- *********************************************FOOTER**************************************************************************************-->
+
+    <div>
+        <link rel="stylesheet" href="{ %static 'static/footer.css'}">
+
+
+        <div class="container-fluid mx-auto text-white bg-dark">
+
+            <div class="row">
+                <div class="line mb-3 mx-auto"></div>
+                <div class="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-3">
+                    <div class="p-2 flex-fill bd-highlight mb-5 mb-md-0">
+
+                        <img src="{% static 'catalog/logo.jpg' %}">
+
+                    </div>
+
+                    <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+                        <br>
+                        <br>
+                        <br>
+                        <h5 class="places">CREATED FOR-</h5>
+                        <p>WT COURSE PROJECT</p>
+
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+                        <br>
+                        <br>
+                        <br>
+                        <h5 class="places">TEAM MEMBERS</h5>
+                        <p class="mb-0">ANUSH K BYAKODI</p>
+                        <p class="mb-0">BASAVRAJ SAVDATTI</p>
+                        <p class="mb-0">ANISHMA NAIK</p>
+                        <p class="mb-0">AVINASH REDDY T</p>
+                    </div>
+                    <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+                        <br>
+                        <br>
+                        <br>
+                        <h5 class="places">USN</h5>
+                        <p class="mb-0">01FE18BCS042</p>
+                        <p class="mb-0">01FE18BCS062</p>
+                        <p class="mb-0">01FE18BCS037</p>
+                        <p class="mb-0">01FE18BCS057</p>
+                    </div>
+                </div>
+                <div class="line mb-3 mx-auto"></div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</body>
+
+</html>{% endblock %}

@@ -1,0 +1,52 @@
+body {
+    overflow-x: hidden;
+    color: #fff
+}
+
+p {
+    font-size: 14px
+}
+
+.container-fluid {
+    background-color: #252324
+}
+
+.top-part {
+    background-color: #252324
+}
+
+.center-content {
+    margin-top: 120px;
+    margin-bottom: 120px
+}
+
+.btn-pink {
+    border-radius: 0;
+    background-color: #7B1FA2;
+    color: #fff !important;
+    letter-spacing: 2px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px
+}
+
+.btn-pink:hover {
+    background-color:  #512DA8
+}
+
+.line {
+    border-top: 1px solid #7B1FA2;
+    width: 90% !important
+}
+
+.fa-mobile {
+    font-size: 20px
+}
+
+#contact {
+    font-size: 15px
+}
+
+.grey-text {
+    color: lightgrey
+}

@@ -1,0 +1,87 @@
+{% extends 'myapp/nav.html' %} {% load static %} {% block content %} {}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+
+
+</head>
+<style>
+    /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+    
+    .login,
+    .image {
+        min-height: 100vh;
+    }
+    
+    .bg-image {
+        background-image: url('https://st2.depositphotos.com/1825047/10956/i/950/depositphotos_109568434-stock-photo-hampi-india-in-black-and.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutter text-white" style="background-color: #2a2729;">
+            <!-- The image half -->
+            <div class="col-md-8 d-none d-md-flex bg-image"></div>
+
+
+            <!-- The content half -->
+            <div class="col-md-4 bg-black text-white">
+                <div class="login d-flex align-items-center py-5">
+
+                    <!-- Demo content-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 col-xl-7 mx-auto">
+                                <div class="display-5">
+                                    <img src="{% static 'myapp/logo.jpg' %}">
+                                </div>
+                                <p class="text-muted mb-4"><br></p>
+                                <form method="POST" action="">
+                                    {% csrf_token %}
+
+                                    <div class="form-group mb-3">
+                                        <input id="text" type="text" name="username" placeholder="Username" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputPassword" type="password" name="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    </div>
+
+                                    <div class="text-center d-flex justify-content-between mt-4 text-warning">{% if messages %}{% for message in messages %}
+                                        <p>{{message}}</p>{% endfor %}{% endif %}</div>
+                                    <button type="submit" class="btn btn-secondary btn-block text-uppercase mb-2 rounded-pill shadow-sm" value="Login">Sign in</button>
+                                    <div class="text-center text-muted">
+                                        <a class="small font-italic" href="{% url 'register' %}">Dont have an Account?</a></div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <!-- End -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}
